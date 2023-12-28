@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sample.css">
+    <title>Your Pet Adoption Website</title>
+</head>
+<body>
+    <header>
+        <h1>PawsParadise</h1>
+        <nav>
+            <ul>
+                <li><a href="#search">Search</a></li>
+                <li><a href="#featured-pets">Featured Pets</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="search">
+        <h2>Find Your Perfect Pet</h2>
+        <form id="search-form">
+            <label for="pet-type">Pet Type:</label>
+            <select id="pet-type" name="pet-type">
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <!-- Add more options as needed -->
+            </select>
+            <button type="submit">Search</button>
+        </form>
+        <div id="search-results"></div>
+    </section>
+
+    <section id="featured-pets">
+        <h2>Featured Pets</h2>
+        <div id="featured-pets-list"></div>
+    </section>
+
+    <section id="how-it-works">
+        <h2>How It Works</h2>
+        <p>Explore our website, find a pet you like, and follow the adoption process.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Your Pet Adoption</p>
+    </footer>
+
+    <script src="sample.js"></script>
+</body>
+</html>

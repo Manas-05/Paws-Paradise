@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Admin</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px 0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .success-message {
+            color: #4CAF50;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add a Pet</h1>
+    <form id="petForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="species">Species:</label>
+        <input type="text" id="species" name="species" required>
+
+        <label for="breed">Breed:</label>
+        <input type="text" id="breed" name="breed" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="vaccination">Vaccination Details:</label>
+        <input type="text" id="vaccination" name="vaccination" required>
+
+        <label for="image">Image:</label>
+        <input type="file" id="image" name="image" accept="image/*" required>
+
+        <button type="submit">Add Pet</button>
+    </form>
+
+    <!-- Success message container -->
+    <div id="successMessage" class="success-message"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const petForm = document.getElementById('petForm');
+            const successMessage = document.getElementById('successMessage');
+
+            petForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const formData = new FormData(this);
+
+                // Make a POST request to add a pet
+                fetch('/add-pet', {
+                    method: 'POST',
+                    body: formData,
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data.message);
+                        // Show success message
+                        successMessage.textContent = data.message;
+                        // Clear the form
+                        petForm.reset();
+                        // Clear the success message after a few seconds
+                        setTimeout(() => {
+                            successMessage.textContent = '';
+                        }, 5000);
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+            });
+        });
+    </script>
+</body>
+</html>

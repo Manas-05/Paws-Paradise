@@ -1,0 +1,23 @@
+CSS                                                                                                                                           body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .ad-slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Set a max-width for the slider */
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .ad-slide {
+    display: none;
+  }
+  
+  .ad-slide img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Add any additional styles as needed */

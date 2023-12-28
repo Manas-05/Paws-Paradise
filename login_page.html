@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>PawsParadise - Login</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- Google Font - Poppins -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .login-container {
+      max-width: 400px;
+      margin: 100px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-container h2 {
+      font-family: 'Poppins', sans-serif; /* Change the font to Poppins */
+      text-align: center;
+      color: #343a40;
+    }
+
+    .login-form {
+      margin-top: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      font-weight: bold;
+    }
+
+    .form-control {
+      height: 40px;
+      border-radius: 8px;
+    }
+
+    .btn-login {
+      background-color: #3572dc; /* Change the button color to blue */
+      color: #ffffff;
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .btn-login:hover {
+      background-color: #2938a8; /* Darker blue on hover */
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="login-container">
+    <h2>PawsParadise</h2>
+    <form class="login-form">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" placeholder="Enter your username">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter your password">
+      </div>
+      <button type="submit" class="btn btn-login">Login</button>
+      <div class="forgot-password">
+        <a href="#">Forgot Password?</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Bootstrap JS and dependencies (optional) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
